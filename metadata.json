@@ -1,0 +1,6 @@
+{
+  "name": "VocaShield",
+  "description": "Real-time AI voice risk scoring that detects deepfakes, synthetic clones, and spoofed callers during live phone calls.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

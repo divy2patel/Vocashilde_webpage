@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #061423;
+  --color-surface-dim: #061423;
+  --color-surface-bright: #2d3a4a;
+  --color-surface-container-lowest: #020f1e;
+  --color-surface-container-low: #0f1c2c;
+  --color-surface-container: #132030;
+  --color-surface-container-high: #1e2b3b;
+  --color-surface-container-highest: #283646;
+  --color-surface-variant: #283646;
+  --color-on-surface: #d6e4f9;
+  --color-on-surface-variant: #bbc9cd;
+  --color-inverse-surface: #d6e4f9;
+  --color-inverse-on-surface: #243141;
+  --color-outline: #869397;
+  --color-outline-variant: #3c494d;
+  --color-surface-tint: #3ed7fa;
+  --color-primary: #69e0ff;
+  --color-on-primary: #003641;
+  --color-primary-container: #19c6e8;
+  --color-on-primary-container: #004e5d;
+  --color-inverse-primary: #00687b;
+  --color-secondary: #40e18a;
+  --color-on-secondary: #00391d;
+  --color-secondary-container: #03c471;
+  --color-on-secondary-container: #004a27;
+  --color-tertiary: #ffc2c2;
+  --color-on-tertiary: #680017;
+  --color-tertiary-container: #ff999c;
+  --color-on-tertiary-container: #920024;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-primary-fixed: #aeecff;
+  --color-primary-fixed-dim: #3ed7fa;
+  --color-secondary-fixed: #64fea4;
+  --color-secondary-fixed-dim: #40e18a;
+  --color-tertiary-fixed: #ffdad9;
+  --color-tertiary-fixed-dim: #ffb3b4;
+  --color-background: #061423;
+  --color-on-background: #d6e4f9;
+
+  --font-headline: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+  html.dark, html.dark body {
+    background-color: #061423;
+    color: #d6e4f9;
+  }
+  html.light, html.light body {
+    background-color: #f4f7fb;
+    color: #0c1929;
+  }
+}
+
+.font-headline {
+  font-family: 'Manrope', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Spacing & Typography Utilities matching template */
+.font-headline-lg { font-family: 'Manrope', sans-serif; }
+.font-headline-md { font-family: 'Manrope', sans-serif; }
+.font-headline-sm { font-family: 'Manrope', sans-serif; }
+.font-display-xl { font-family: 'Manrope', sans-serif; }
+.font-display-xl-mobile { font-family: 'Manrope', sans-serif; font-size: 2.25rem; line-height: 2.75rem; letter-spacing: -0.02em; font-weight: 800; }
+.font-display-lg { font-family: 'Manrope', sans-serif; font-size: 2.5rem; line-height: 3.125rem; letter-spacing: -0.02em; font-weight: 700; }
+.font-display-lg-mobile { font-family: 'Manrope', sans-serif; font-size: 1.75rem; line-height: 2.25rem; letter-spacing: -0.015em; font-weight: 700; }
+.font-telemetry-metric { font-family: 'JetBrains Mono', monospace; font-size: 2.25rem; line-height: 2.5rem; letter-spacing: -0.03em; font-weight: 700; }
+.font-label-md { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; line-height: 1rem; letter-spacing: 0.08em; }
+.font-label-sm { font-family: 'JetBrains Mono', monospace; font-size: 0.6875rem; line-height: 0.875rem; letter-spacing: 0.1em; }
+.font-body-lg { font-family: 'Inter', sans-serif; font-size: 1.125rem; line-height: 1.75rem; }
+.font-body-md { font-family: 'Inter', sans-serif; font-size: 0.9375rem; line-height: 1.5rem; }
+.font-body-sm { font-family: 'Inter', sans-serif; font-size: 0.8125rem; line-height: 1.25rem; }
+
+.px-gutter-mobile { padding-left: 1rem; padding-right: 1rem; }
+@media (min-width: 640px) {
+  .px-gutter-mobile { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+.gap-space-xs { gap: 0.25rem; }
+.gap-space-sm { gap: 0.5rem; }
+.gap-space-md { gap: 1rem; }
+.gap-space-lg { gap: 1.5rem; }
+.gap-space-xl { gap: 2.5rem; }
+
+.p-space-xs { padding: 0.25rem; }
+.p-space-sm { padding: 0.5rem; }
+.p-space-md { padding: 1rem; }
+.p-space-lg { padding: 1.5rem; }
+.p-space-xl { padding: 2.5rem; }
+
+.pt-space-xs { padding-top: 0.25rem; }
+.pt-space-sm { padding-top: 0.5rem; }
+.pt-space-md { padding-top: 1rem; }
+.pt-space-lg { padding-top: 1.5rem; }
+.pt-space-xl { padding-top: 2.5rem; }
+
+.pb-space-xs { padding-bottom: 0.25rem; }
+.pb-space-sm { padding-bottom: 0.5rem; }
+.pb-space-md { padding-bottom: 1rem; }
+.pb-space-lg { padding-bottom: 1.5rem; }
+.pb-space-xl { padding-bottom: 2.5rem; }
+
+.py-space-xs { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-space-sm { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-space-md { padding-top: 1rem; padding-bottom: 1rem; }
+.py-space-lg { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-space-xl { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+
+.px-space-xs { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-space-sm { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-space-md { padding-left: 1rem; padding-right: 1rem; }
+.px-space-lg { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-space-xl { padding-left: 2.5rem; padding-right: 2.5rem; }
+
+.mt-space-xs { margin-top: 0.25rem; }
+.mt-space-sm { margin-top: 0.5rem; }
+.mt-space-md { margin-top: 1rem; }
+.mt-space-lg { margin-top: 1.5rem; }
+.mt-space-xl { margin-top: 2.5rem; }
+
+.mb-space-xs { margin-bottom: 0.25rem; }
+.mb-space-sm { margin-bottom: 0.5rem; }
+.mb-space-md { margin-bottom: 1rem; }
+.mb-space-lg { margin-bottom: 1.5rem; }
+.mb-space-xl { margin-bottom: 2.5rem; }
+
+.pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+/* Pulse and glowing styles */
+@keyframes acoustic-wave {
+  0%, 100% { height: 6px; }
+  50% { height: 28px; }
+}
+
